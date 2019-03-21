@@ -4,8 +4,9 @@ Title : Eisenhower Productivity Matrix
 """
 
 ###### IMPORT MODULES #######
-import time
-# print (time.strftime("%d/%m/%Y %I:%M%p")) # Standard Time Format for the App
+# import time
+# # print (time.strftime("%d/%m/%Y %I:%M%p")) # Standard Time Format for the App
+import TaskCard
 
 # TODO : The program needs to store 5 types of items
 # TODO : the storage will need to be made more efficient
