@@ -33,71 +33,48 @@ ImportantNotUrgentItems = []
 # --------------------------------------------------
 NotImportantNotUrgentItems = []
 
+
+
 # TODO : Functional Changes to be done on the Card
 
 # --------------------------------------------------
 #     Task : Add
 # --------------------------------------------------
+"""
+This function will add a new card to the storage
 
+A confirmation must be shown at the end 
+"""
 
 # --------------------------------------------------
 #     Task : Edit
 # --------------------------------------------------
+"""
+This function will edit existing card in the storage
 
+A confirmation must be shown at the end 
+"""
 
 # --------------------------------------------------
 #     Task : Delete
 # --------------------------------------------------
+"""
+This function will delete existing card from the storage
+
+A confirmation must be shown at the end 
+"""
 
 
 # --------------------------------------------------
 #     Task : Move
 # --------------------------------------------------
-
+"""
+This function will move existing card in the storage to another bucket
+will be using # Card Name / ID to recognise the card
+A confirmation must be shown at the end 
+"""
 
 # --------------------------------------------------
 #     Task : Change State - Done / Incomplete
 # --------------------------------------------------
 
-# TODO : Each task must be a self contained object
-
-# --------------------------------------------------
-#     Task : Instance
-#     Task : Date Added
-#     Task : Date Modified
-#     Task : Date Completed
-#     Task : Task State - Done / Incomplete
-
-# Default Format : %d/%m/%Y %I:%M%p
-
-# --------------------------------------------------
-class Task:
-      def __init__(self, taskName):
-            self.taskName = taskName
-            self.taskComplete = False     # all new tasks are incomplete
-            self.dateAdded = time.strftime("%d/%m/%Y %I:%M%p") # current time
-            self.lastModified = ""
-            self.dateCompleted = ""
-            return
-
-      def get_taskName(self):
-            return self.taskName
-      
-      def get_taskStatus(self):
-            if self.taskComplete is True:
-                  return "Task Complete"
-            else:
-                  return "Task Incomplete"
-      
-      def get_dateAdded(self):
-            return self.dateAdded
-      
-      def get_lastModified(self):
-            return self.lastModified
-      
-      def get_dateCompleted(self):
-            if self.taskComplete is True:
-                  return self.dateCompleted
-            else:
-                  return "task incomplete"
-      
