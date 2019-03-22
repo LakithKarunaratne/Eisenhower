@@ -35,7 +35,6 @@ ImportantNotUrgentItems = []
 NotImportantNotUrgentItems = []
 
 
-
 # TODO : Functional Changes to be done on the Card
 
 # --------------------------------------------------
@@ -78,4 +77,3 @@ A confirmation must be shown at the end
 # --------------------------------------------------
 #     Task : Change State - Done / Incomplete
 # --------------------------------------------------
-
