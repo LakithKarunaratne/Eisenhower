@@ -1,12 +1,17 @@
+
 import time
 
-def gencode():
-    return
+import hashlib
 
-def getTime():
-    """ 
-    %d/%m/%Y %I:%M%p # current time standard format
+
+def gencode(taskName):
     """
-    return time.strftime("%d/%m/%Y %I:%M%p") 
+    this generates a unique code for a given value
+    """
+    now = getTime()
+    string = taskName + now
+    result = hashlib.md5(string.encode()) 
+    result = result.hexdigest()
+    return result
 
-getTime()
+print(gencode("hihihi"))
