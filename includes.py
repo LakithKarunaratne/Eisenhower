@@ -4,9 +4,20 @@ Assume as a header file for python, for easy code readability
 """
 import time
 
+import hashlib
 
-def gencode():
-    return
+
+def gencode(taskName):
+    """
+    this generates a unique code for a given value
+    taskName : Name of the 
+    """
+    now = getTime() # get the current time stamp
+    string = taskName + now # concatenate with taskName
+    result = hashlib.md5(string.encode()) # encode to md5
+    result = result.hexdigest() # get hash digest
+    return result # return value
+
 
 
 def getTime():
@@ -18,5 +29,7 @@ def getTime():
     """
     return time.strftime("%d/%m/%Y %I:%M%p")
 
-
-print(getTime())
+if __name__ == "__main__":
+    print(getTime())
+    print(gencode("hihihi"))
+    pass
